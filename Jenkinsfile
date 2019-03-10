@@ -34,9 +34,11 @@ pipeline{
 
 	stage ( 'Test variables') {
 			steps {
-					def username = 'Jenkins'
-					echo 'Hello Mr. ${username}'
-					echo "I said, Hello Mr. ${username}"
+					step {
+						def username = 'Jenkins'
+						echo 'Hello Mr. ${username}'
+						echo "I said, Hello Mr. ${username}"
+					}
 			}
 		}
 	}	 
